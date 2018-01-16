@@ -1,5 +1,7 @@
 package com.kamatama41.algorithm;
 
+import java.util.Scanner;
+
 public class Exercise1_1 {
 
     static int max4(int a, int b, int c, int d) {
@@ -11,6 +13,16 @@ public class Exercise1_1 {
     }
 
     public static void main(String[] args) {
+        Scanner stdIn = new Scanner(System.in);
+        System.out.println("a: "); int a = stdIn.nextInt();
+        System.out.println("b: "); int b = stdIn.nextInt();
+        System.out.println("c: "); int c = stdIn.nextInt();
+        System.out.println("d: "); int d = stdIn.nextInt();
+
+        System.out.println("max = " + max4(a, b, c, d));
+    }
+
+    public static void test() {
         System.out.println(max4(4, 3, 2, 1)); // [A] a > b > c > d
         System.out.println(max4(4, 3, 2, 2)); // [B] a > b > c = d
         System.out.println(max4(4, 3, 1, 2)); // [C] a > b > d > c
