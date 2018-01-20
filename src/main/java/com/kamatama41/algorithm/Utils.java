@@ -14,7 +14,10 @@ public class Utils {
     }
 
     static int[] randomIntArray() {
-        int n = 1 + RAND.nextInt(10);
+        return randomIntArray(1 + RAND.nextInt(10));
+    }
+
+    static int[] randomIntArray(int n) {
         System.out.println("要素数は: " + n);
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
