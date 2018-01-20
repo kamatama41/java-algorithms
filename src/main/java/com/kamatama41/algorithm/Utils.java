@@ -59,4 +59,18 @@ public class Utils {
         }
         return result;
     }
+
+    static void printHeader(int n) {
+        System.out.print("   |");
+        for (int i = 0; i < n; i++) {
+            System.out.printf(" %2d", i);
+        }
+        System.out.println();
+
+        System.out.print("---+");
+        for (int i = 0; i < n; i++) {
+            System.out.print("---");
+        }
+        System.out.println();
+    }
 }

@@ -4,23 +4,12 @@ package com.kamatama41.algorithm;
 import java.util.Arrays;
 
 import static com.kamatama41.algorithm.Utils.inputInt;
+import static com.kamatama41.algorithm.Utils.printHeader;
 import static com.kamatama41.algorithm.Utils.randomIntArray;
 
 public class Exercise3_2 {
     static int seqSearchSen2(int[] a, int n, int key) {
-        System.out.print("   |");
-        for (int i = 0; i < n; i++) {
-            System.out.printf(" %2d", i);
-        }
-        System.out.println();
-
-        System.out.print("---+");
-        for (int i = 0; i < n; i++) {
-            System.out.print("---");
-        }
-        System.out.println();
-
-
+        printHeader(n);
         for (int i = 0; i < n; i++) {
             System.out.printf("   |");
             for (int j = 0; j < n; j++) {
