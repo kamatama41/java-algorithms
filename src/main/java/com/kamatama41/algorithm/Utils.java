@@ -1,5 +1,6 @@
 package com.kamatama41.algorithm;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.function.IntPredicate;
@@ -33,6 +34,16 @@ public class Utils {
         for (int i = 0; i < n; i++) {
             a[i] = RAND.nextInt(100);
         }
+        return a;
+    }
+
+    static int[] sortedIntArray(int n) {
+        System.out.println("要素数は: " + n);
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = RAND.nextInt(100);
+        }
+        Arrays.sort(a);
         return a;
     }
 
@@ -70,6 +81,14 @@ public class Utils {
         System.out.print("---+");
         for (int i = 0; i < n; i++) {
             System.out.print("---");
+        }
+        System.out.println();
+    }
+
+    static void printArray(int[] a, int n, int idx) {
+        System.out.printf(" %2d|", idx);
+        for (int i = 0; i < n; i++) {
+            System.out.printf(" %2d", a[i]);
         }
         System.out.println();
     }

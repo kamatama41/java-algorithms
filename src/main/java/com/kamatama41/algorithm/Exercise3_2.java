@@ -3,9 +3,7 @@ package com.kamatama41.algorithm;
 
 import java.util.Arrays;
 
-import static com.kamatama41.algorithm.Utils.inputInt;
-import static com.kamatama41.algorithm.Utils.printHeader;
-import static com.kamatama41.algorithm.Utils.randomIntArray;
+import static com.kamatama41.algorithm.Utils.*;
 
 public class Exercise3_2 {
     static int seqSearchSen2(int[] a, int n, int key) {
@@ -20,11 +18,8 @@ public class Exercise3_2 {
                 }
             }
             System.out.println();
-            System.out.printf(" %2d|", i);
-            for (int j = 0; j < n; j++) {
-                System.out.printf(" %2d", a[j]);
-            }
-            System.out.println();
+
+            printArray(a, n, i);
             if (a[i] == key)
                 return i;
         }
