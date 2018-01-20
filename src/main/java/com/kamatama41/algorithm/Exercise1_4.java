@@ -3,28 +3,20 @@ package com.kamatama41.algorithm;
 public class Exercise1_4 {
 
     static int med3(int a, int b, int c) {
-        if (a > b) {
+        if (a >= b) {
             if (b >= c) {
-                return b;       // a > b > c or a > b = c
+                return b;       // A, B, F, G
+            } else if  (a <= c) {
+                return a;       // D, E, H
             } else {
-                if (a >= c) {
-                    return c;   // a > c > b or a = c > b
-                } else {
-                    return a;   // c > a > b
-                }
+                return c;       // C
             }
-        } else if (a == b) {
-            return a;           // a = b > c or a = b = c or c > a = b
-        } else {
-            if (a >= c) {
-                return a;       // b > a > c or b > a == c
-            } else {
-                if (b >= c) {
-                    return c;   // b > c > a or b == c > a
-                } else {
-                    return b;   // c > b > a
-                }
-            }
+        } else if (/* a < b and */ a > c) {
+            return a;           // I
+        } else if (/* a < b and a <= c and */ b > c) {
+            return c;           // J, K
+        } else /* a < b and a <= c and b <= c */ {
+            return b;
         }
     }
 
