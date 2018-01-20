@@ -24,6 +24,14 @@ public class Utils {
         a[j] = t;
     }
 
+    static int randomInt(int n) {
+        return RAND.nextInt(n);
+    }
+
+    static boolean randamBool() {
+        return RAND.nextBoolean();
+    }
+
     static int[] randomIntArray() {
         return randomIntArray(1 + randomInt(10));
     }
@@ -45,10 +53,6 @@ public class Utils {
         }
         Arrays.sort(a);
         return a;
-    }
-
-    static int randomInt(int n) {
-        return RAND.nextInt(n);
     }
 
     static int inputInt(String message) {
