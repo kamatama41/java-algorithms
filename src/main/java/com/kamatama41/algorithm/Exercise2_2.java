@@ -1,22 +1,14 @@
 package com.kamatama41.algorithm;
 
 import java.util.Arrays;
-import java.util.Random;
 
 import static com.kamatama41.algorithm.Utils.*;
 
 public class Exercise2_2 {
 
     public static void main(String[] args) {
-        Random rand = new Random();
-
-        int n = 1 + rand.nextInt(10);
-        System.out.println("要素数は: " + n);
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++) {
-            a[i] = rand.nextInt(100);
-        }
-
+        int[] a = randomIntArray();
+        int n = a.length;
         System.out.println(Arrays.toString(a));
         for (int i = 0; i < n / 2; i++) {
             int j = n - i - 1;
