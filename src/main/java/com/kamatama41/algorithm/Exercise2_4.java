@@ -15,7 +15,7 @@ public class Exercise2_4 {
 
     public static void main(String[] args) {
         int n = 5;
-        int[] a = randomIntArray(n);
+        int[] a = randomIntArray(n + 2);
         int[] b = randomIntArray(n);
         System.out.println(Arrays.toString(a));
         System.out.println(Arrays.toString(b));
