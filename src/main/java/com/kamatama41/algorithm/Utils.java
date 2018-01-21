@@ -6,10 +6,13 @@ import java.util.Scanner;
 import java.util.function.IntPredicate;
 
 public class Utils {
+    private static String ALPHA_NUMERIC = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
     private static Random RAND = new Random();
     private static Scanner STDIN = new Scanner(System.in);
 
-    private Utils() {}
+    private Utils() {
+    }
 
     static void swap(char[] a, int i, int j) {
         char t = a[i];
@@ -29,6 +32,11 @@ public class Utils {
 
     static boolean randomBool() {
         return RAND.nextBoolean();
+    }
+
+    static char randomChar() {
+        char[] chars = alphaNumerics();
+        return chars[randomInt(chars.length)];
     }
 
     static int[] randomIntArray() {
@@ -54,6 +62,10 @@ public class Utils {
         return a;
     }
 
+    static char[] alphaNumerics() {
+        return ALPHA_NUMERIC.toCharArray();
+    }
+
     static int inputInt(String message) {
         return inputInt(message, null, n -> false);
     }
@@ -64,12 +76,14 @@ public class Utils {
 
     static int inputInt(String message, String errMessage, IntPredicate condition) {
         int result;
-        System.out.print(message + ": "); result = STDIN.nextInt();
-        while(condition.test(result)) {
-            if(errMessage != null) {
+        System.out.print(message + ": ");
+        result = STDIN.nextInt();
+        while (condition.test(result)) {
+            if (errMessage != null) {
                 System.out.println(errMessage);
             }
-            System.out.print(message + ": "); result = STDIN.nextInt();
+            System.out.print(message + ": ");
+            result = STDIN.nextInt();
         }
         return result;
     }
