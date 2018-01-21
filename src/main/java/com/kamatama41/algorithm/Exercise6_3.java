@@ -52,7 +52,7 @@ public class Exercise6_3 {
 
     public static void main(String[] args) {
         System.out.println("Bubble sorting");
-        int n = 10;
+        int n = 15;
         int[] a = randomIntArray(n);
         System.out.println(Arrays.toString(a));
 
