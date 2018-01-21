@@ -4,7 +4,7 @@ import java.util.stream.IntStream;
 
 import static com.kamatama41.algorithm.Utils.*;
 
-public class Exercise4_1 {
+public class Exercise4_2 {
     public static void main(String[] args) {
         ArrayStack<Character> stack = new ArrayStack<>(36);
         System.out.printf("Is empty? -> %s\n", stack.isEmpty());
