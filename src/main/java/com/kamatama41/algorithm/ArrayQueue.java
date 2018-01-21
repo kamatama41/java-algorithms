@@ -20,7 +20,7 @@ public class ArrayQueue<E> {
             throw new IllegalStateException("Queue is full.");
         queue[rear++] = e;
         num++;
-        if(rear == max) {
+        if (rear == max) {
             rear = 0;
         }
         return e;
@@ -47,9 +47,18 @@ public class ArrayQueue<E> {
         for (int i = 0; i < num; i++) {
             int actualIndex = (i + front) % max;
             if (queue[actualIndex].equals(e))
-                return i;
+                return actualIndex;
         }
         return -1;
+    }
+
+    public int search(E e) {
+        for (int i = 0; i < num; i++) {
+            int actualIndex = (i + front) % max;
+            if (queue[actualIndex].equals(e))
+                return i + 1;
+        }
+        return 0;
     }
 
     public void clear() {

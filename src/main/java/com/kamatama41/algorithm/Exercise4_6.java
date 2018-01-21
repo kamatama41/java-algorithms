@@ -20,6 +20,7 @@ public class Exercise4_6 {
             stack.dump();
             char c = randomChar();
             System.out.printf("Index of %c is %d\n", c, stack.indexOf(c));
+            System.out.printf("Index of %c as queue is %d\n", c, stack.search(c));
         });
         System.out.printf("Current peek is %s\n", stack.peek());
     }
