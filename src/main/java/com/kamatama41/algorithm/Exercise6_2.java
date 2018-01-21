@@ -6,6 +6,24 @@ import static com.kamatama41.algorithm.Utils.randomIntArray;
 import static com.kamatama41.algorithm.Utils.swap;
 
 public class Exercise6_2 {
+    static void print(int[] a, int n, int j, boolean swap) {
+        System.out.print("j:" + j + "|");
+        for (int k = 0; k < n; k++) {
+            char symbol;
+            if (k == j) {
+                if (swap) {
+                    symbol = '+';
+                } else {
+                    symbol = '-';
+                }
+            } else {
+                symbol = ' ';
+            }
+            System.out.printf(" %d %c", a[k], symbol);
+        }
+        System.out.println();
+    }
+
     static void bubbleSort(int[] a, int n) {
         int numOfComparing = 0;
         int numOfSwapping = 0;
@@ -14,31 +32,14 @@ public class Exercise6_2 {
             for (int j = 0; j < n - i - 1; j++) {
                 boolean swap = a[j] > a[j + 1];
                 numOfComparing++;
-
-                System.out.print("j:" + j + "|");
-                for (int k = 0; k < n; k++) {
-                    char symbol;
-                    if (k == j) {
-                        if (swap) {
-                            symbol = '+';
-                        } else {
-                            symbol = '-';
-                        }
-                    } else {
-                        symbol = ' ';
-                    }
-                    System.out.printf(" %d %c", a[k], symbol);
-                }
-                System.out.println();
-
-                if(swap) {
+                print(a, n, j, swap);
+                if (swap) {
                     swap(a, j, j + 1);
                     numOfSwapping++;
                 }
             }
             System.out.println();
         }
-
         System.out.println("Comparing: " + numOfComparing);
         System.out.println("Swapping: " + numOfSwapping);
     }
