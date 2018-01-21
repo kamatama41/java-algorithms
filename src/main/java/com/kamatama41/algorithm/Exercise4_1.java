@@ -6,7 +6,7 @@ import static com.kamatama41.algorithm.Utils.*;
 
 public class Exercise4_1 {
     public static void main(String[] args) {
-        Stack<Character> stack = new Stack<>(36);
+        ArrayStack<Character> stack = new ArrayStack<>(36);
         System.out.printf("Is empty? -> %s\n", stack.isEmpty());
         for (char c : alphaNumerics()) {
             stack.push(c);
