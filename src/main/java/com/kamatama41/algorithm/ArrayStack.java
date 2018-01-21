@@ -14,8 +14,8 @@ public class ArrayStack<E> {
     }
 
     public E push(E e) {
-        if (pointer > max)
-            throw new IllegalStateException("ArrayStack is full.");
+        if (pointer >= max)
+            throw new IllegalStateException("Stack is full.");
         return stack[pointer++] = e;
     }
 
