@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.function.IntPredicate;
-import java.util.function.Predicate;
 
 public class Utils {
     private static Random RAND = new Random();
@@ -28,7 +27,7 @@ public class Utils {
         return RAND.nextInt(n);
     }
 
-    static boolean randamBool() {
+    static boolean randomBool() {
         return RAND.nextBoolean();
     }
 

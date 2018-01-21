@@ -63,7 +63,7 @@ public class Exercise3_5 {
     public static void main(String[] args) {
         int[] a = {1, 3, 5, 7, 7, 7, 7, 8, 8, 9, 9};
         System.out.println(Arrays.toString(a));
-        int key = randamBool() ? randamBool() ? randamBool() ? 5 : 7 : 8 : 9;
+        int key = randomBool() ? randomBool() ? randomBool() ? 5 : 7 : 8 : 9;
         System.out.println("探す値: " + key);
         int idx = binSearchX(a, a.length, key);
         System.out.println("idx: " + idx);
