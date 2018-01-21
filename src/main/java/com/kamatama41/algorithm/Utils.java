@@ -14,36 +14,36 @@ public class Utils {
     private Utils() {
     }
 
-    static void swap(char[] a, int i, int j) {
+    public static void swap(char[] a, int i, int j) {
         char t = a[i];
         a[i] = a[j];
         a[j] = t;
     }
 
-    static void swap(int[] a, int i, int j) {
+    public static void swap(int[] a, int i, int j) {
         int t = a[i];
         a[i] = a[j];
         a[j] = t;
     }
 
-    static int randomInt(int n) {
+    public static int randomInt(int n) {
         return RAND.nextInt(n);
     }
 
-    static boolean randomBool() {
+    public static boolean randomBool() {
         return RAND.nextBoolean();
     }
 
-    static char randomChar() {
+    public static char randomChar() {
         char[] chars = alphaNumerics();
         return chars[randomInt(chars.length)];
     }
 
-    static int[] randomIntArray() {
+    public static int[] randomIntArray() {
         return randomIntArray(1 + randomInt(10));
     }
 
-    static int[] randomIntArray(int n) {
+    public static int[] randomIntArray(int n) {
         System.out.println("要素数は: " + n);
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
@@ -52,7 +52,7 @@ public class Utils {
         return a;
     }
 
-    static int[] sortedIntArray(int n) {
+    public static int[] sortedIntArray(int n) {
         System.out.println("要素数は: " + n);
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
@@ -62,19 +62,19 @@ public class Utils {
         return a;
     }
 
-    static char[] alphaNumerics() {
+    public static char[] alphaNumerics() {
         return ALPHA_NUMERIC.toCharArray();
     }
 
-    static int inputInt(String message) {
+    public static int inputInt(String message) {
         return inputInt(message, null, n -> false);
     }
 
-    static int inputInt(String message, IntPredicate condition) {
+    public static int inputInt(String message, IntPredicate condition) {
         return inputInt(message, null, condition);
     }
 
-    static int inputInt(String message, String errMessage, IntPredicate condition) {
+    public static int inputInt(String message, String errMessage, IntPredicate condition) {
         int result;
         System.out.print(message + ": ");
         result = STDIN.nextInt();
@@ -88,7 +88,7 @@ public class Utils {
         return result;
     }
 
-    static void printHeader(int n) {
+    public static void printHeader(int n) {
         System.out.print("   |");
         for (int i = 0; i < n; i++) {
             System.out.printf(" %2d", i);
@@ -102,7 +102,7 @@ public class Utils {
         System.out.println();
     }
 
-    static void printArray(int[] a, int n, int idx) {
+    public static void printArray(int[] a, int n, int idx) {
         System.out.printf(" %2d|", idx);
         for (int i = 0; i < n; i++) {
             System.out.printf(" %2d", a[i]);
