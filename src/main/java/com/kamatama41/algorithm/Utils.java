@@ -44,22 +44,28 @@ public class Utils {
     }
 
     public static int[] randomIntArray(int n) {
-        System.out.println("要素数は: " + n);
+        return randomIntArray(n, 100);
+    }
+
+    public static int[] randomIntArray(int n, int bound) {
+        System.out.println("Num of elements: " + n);
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
-            a[i] = RAND.nextInt(100);
+            a[i] = RAND.nextInt(bound);
         }
         return a;
     }
 
+    public static int[] randomNonZeroIntArray(int n, int bound) {
+        return Arrays.stream(randomIntArray(n, bound))
+                .map(i -> i + 1)
+                .toArray();
+    }
+
     public static int[] sortedIntArray(int n) {
-        System.out.println("要素数は: " + n);
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++) {
-            a[i] = RAND.nextInt(100);
-        }
-        Arrays.sort(a);
-        return a;
+        return Arrays.stream(randomIntArray(n, 100))
+                .sorted()
+                .toArray();
     }
 
     public static char[] alphaNumerics() {
