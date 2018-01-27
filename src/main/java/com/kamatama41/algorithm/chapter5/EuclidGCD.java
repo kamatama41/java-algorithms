@@ -14,10 +14,8 @@ public class EuclidGCD {
     }
 
     public static void main(String[] args) {
-        int n1 = randomInt(1000);
-        int n2 = randomInt(1000);
-        int x = Math.max(n1, n2);
-        int y = Math.min(n1, n2);
+        int x = randomInt(1000);
+        int y = randomInt(1000);
         System.out.printf("gcd(%d, %d) = %d", x, y, gcd(x, y));
     }
 }
