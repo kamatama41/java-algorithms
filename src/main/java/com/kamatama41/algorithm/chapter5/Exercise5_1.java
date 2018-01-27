@@ -3,8 +3,8 @@ package com.kamatama41.algorithm.chapter5;
 public class Exercise5_1 {
     static int factorial(int n) {
         int fact = 1;
-        for (int i = 1; i <= n; i++) {
-            fact *= i;
+        while (n > 0) {
+            fact *= n--;
         }
         return fact;
     }
